@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi-calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="bmi-calculator">
+        <h2>BMI Calculator</h2>
+        <form id="bmiForm">
+            <div class="input-group">
+                <label>Gender:</label>
+                <div class="toggle-container">
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male" class="toggle-icon"><i class="fas fa-mars"></i><span> Male</span></label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="toggle-icon"><i class="fas fa-venus"></i><span> Female</span></label>
+                    <span class="toggle-switch"></span>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="feet">Height:</label>
+                <div class="height-inputs">
+                    <input type="number" id="feet" placeholder="Feet" required>
+                    <input type="number" id="inches" placeholder="Inches" required>
+                </div>
+                <div class="cm-output">
+                    <label for="heightCm">Height in cm:</label>
+                    <input type="text" id="heightCm" readonly>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+                <div class="lbs-output">
+                    <label for="weightLbs">Weight in lbs:</label>
+                    <input type="text" id="weightLbs" readonly>
+                </div>
+            </div>
+            <button type="button" id="calculateBtn">Calculate BMI</button>
+            <button type="button" id="clearBtn" class="hidden">Clear & Check Again</button>
+        </form>
+        <div class="result">
+            <h3>Your BMI: <span id="bmiValue"></span></h3>
+            <p id="bmiCategory"></p>
+            <p id="bmiAdvice"></p>
+            <p id="weightRange"></p>
+        </div>
+        <p class="credit">Created by <a href="https://militarymavens.com" target="_blank">Military Mavens</a></p>
+    </div>
+    <script src="bmi-calculator.js"></script>
+</body>
+</html>
